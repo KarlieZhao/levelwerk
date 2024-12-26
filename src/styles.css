@@ -19,6 +19,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -28,4 +29,20 @@ canvas {
   opacity: 0;
   touch-action: none;
   animation: fade-in 3s ease 0.5s forwards;
+  background-color: #000;
+}
+
+.landing-main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  position: fixed;
+  font-size: 15rem;
+  top: 0;
+  left: 0;
+  padding: s0px 20px;
+  color: #05ff2b;
+  /* z-index: inherit; */
 }
