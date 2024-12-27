@@ -49,7 +49,8 @@ function Title() {
     >
     <div className="title"
       ref={wrapperRef}
-    style={{ marginTop:`${200}px` }}>
+    style={{ marginTop:`${200}px`,
+    zIndex:"10000000" }}>
       <img
         ref={imgRef} 
              src="/title_logo.svg"
@@ -59,6 +60,7 @@ function Title() {
           height: 'auto',
           }}
         alt="Logo"
+        
       />
     </div>
   </Html>
