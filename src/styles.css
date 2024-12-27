@@ -134,6 +134,11 @@ canvas {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
   .content {
     width: 95vw;
     margin-left: 0.5rem;
@@ -147,5 +152,9 @@ canvas {
   .NavBar-button {
     width: 5rem;
     font-size: 1rem;
+  }
+
+  .about>div {
+    width: 95vw;
   }
 }
