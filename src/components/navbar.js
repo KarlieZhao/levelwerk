@@ -12,6 +12,6 @@ export default function NavBar({showIcon=true}){
         </Link>
         </div>
     <div role="button" className="NavBar-button">
-        <a href="mailto:levelwerk.ny@gmail.com" target="_blank">Contact</a></div>
+        <Link to="/contact">Contact</Link></div>
     </div>);
 }

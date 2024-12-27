@@ -95,7 +95,8 @@ canvas {
   text-decoration: none;
 }
 
-.about {
+.about,
+.contact {
   display: flex;
   height: fit-content;
   justify-content: center;
