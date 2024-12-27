@@ -110,7 +110,8 @@ canvas {
   text-indent: 15px;
 }
 
-.about>div {
+.about>div,
+.contact>div {
   display: block;
   width: 60vw;
   height: fit-content;
