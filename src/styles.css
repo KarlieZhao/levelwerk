@@ -39,10 +39,19 @@ canvas {
 
 .title {
   position: fixed;
-  font-size: 15rem;
-  top: 0;
-  left: 0;
-  padding: s0px 20px;
-  color: #05ff2b;
-  /* z-index: inherit; */
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo_svg {
+  position: fixed;
+  transition: all 0.05s ease-in-out;
+
+}
+
+.plain-text-wrapper {
+  position: fixed;
+  transform: none !important;
 }
