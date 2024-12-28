@@ -8,7 +8,7 @@ export default function Contact(){
         <main className="contact">
         
         <div >
-            <h2>Wants to collab with us? </h2>
+            <h2>Want to collab with us? </h2>
             <p>We're always on the lookout for artists seeking a place to crash in Brooklyn, wanting to run a workshop, having an exhibition idea, or just like to chat about art. 
             </p><br/>
                 <h3>Email: levelwerk.ny@gmail.com</h3>

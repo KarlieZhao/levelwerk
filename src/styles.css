@@ -156,7 +156,15 @@ canvas {
     font-size: 1rem;
   }
 
-  .about>div {
+  .about,
+  .contact {
+    height: fit-content;
+  }
+
+  .about>div,
+  .contact>div {
     width: 95vw;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
   }
 }
