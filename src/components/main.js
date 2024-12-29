@@ -10,12 +10,16 @@ return ( <div className='landing-main'>
       <NavBar showIcon={false}/>
 
     <Canvas shadows camera={{ position: [0, 0, 10] }}  gl={{ setClearColor: ['#000000', 1] }}>
-      <ambientLight intensity={0.1} />
+      <ambientLight intensity={0.2} />
       <fog attach="fog" args={['#ff5020', 10, 2]} />
-      <spotLight angle={0.14} color="#ffd0d0" penumbra={1} position={[25, 50, -20]} shadow-mapSize={[2048, 2048]} shadow-bias={-0.0001} castShadow />
+      {/* <fog attach="fog" args={['#ff5020', 2, 0]} /> */}
+      {/* <spotLight angle={0.12} intensity={0.1}  color="#ffd0d0" penumbra={1} position={[-300, 100, 0]} shadow-mapSize={[2048, 2048]} shadow-bias={-0.0001} castShadow /> */}
+      <spotLight angle={-0.12} color="#ffd0d0" intensity={0.5} penumbra={1} position={[20, 30, 10]} />
       <Suspense fallback={null}>
         <ScrollControls pages={3}>
-          <RoomScan scale={0.02} position={[2, 1.5,-1]} />
+        {/* <RoomScan scale={0.03} position={[2, 1.5,-1]} /> */}
+         <RoomScan scale={0.022} position={[0,1,1]} />
+          {/* <RoomScan scale={0.02} position={[-6,2,-0.5]} /> */}
           <Title />
           </ScrollControls>
       </Suspense>
@@ -94,17 +98,18 @@ function Title() {
   function RoomScan({ ...props }) {
     // This hook gives you offets, ranges and other useful things
     const scroll = useScroll()
-    const { scene, nodes } = useGLTF('/room_big3.glb')
+    const { scene, nodes } = useGLTF('/scene.glb')
     useLayoutEffect(() => Object.values(nodes).forEach((node) => (node.receiveShadow = node.castShadow = true)))
     useFrame((state) => {
       const offset = 1 - scroll.offset
       state.camera.position.set(
-      Math.sin(offset) * -10, 
-      Math.atan(offset * Math.PI * 2) * 5,
-      Math.cos((offset * Math.PI) / 3) * -4)
-      state.camera.lookAt(0.3, 0, 0)
+      Math.sin(offset* Math.PI/2 ) * 5,
+      Math.atan(offset * Math.PI * 2) * 9,
+      Math.cos((offset * Math.PI) / 3) * 3)
+      state.camera.lookAt(0, 0, 1)
+      // state.camera.lookAt(-8, 1, 0)
     })
     return <primitive object={scene} {...props} />
   }
   
-  useGLTF.preload('/room_big3.glb')  
+  useGLTF.preload('/scene.glb')  
