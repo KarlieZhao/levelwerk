@@ -1,14 +1,18 @@
 import NavBar from "./navbar"
+import PhotoGallery from "./photogal";
+
 export default function About() {
     return (
         <div>
         <NavBar showIcon={true}/>
 <main className="about">
 <div>
+<PhotoGallery/>
+
 <p>LevelWerk is an artist-run alternative art space in Brooklyn, NY, committed to supporting both local and international artists while building community through its residency program.
 It offers a flexible, open environment where resident artists are encouraged to connect with the local community, reflect on their practices, experiment, host workshops, and explore the boundless possibilities of New Media.
 </p><br/>
-<p>Here's what we can offer: 
+<p>We offer:
     <ul>
     <li>A full-size sofa bed</li>
     <li>Social media promotion</li>
