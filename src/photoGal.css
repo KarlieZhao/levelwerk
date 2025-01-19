@@ -1,102 +1,13 @@
-/* .photo-gallery {
-  display: grid;
-  place-items: center;
-}
-
-.photo-gallery ul {
-  display: flex;
-  width: calc(80% - 2rem);
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.photo-gallery li {
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: all 0.2s ease;
-}
-
-ul:is(:hover, :focus-within) img {
-  opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
-  filter: grayscale(calc(1 - var(--active-lerp, 0)));
-}
-
-:root {
-  --lerp-0: 1;
-  --lerp-1: 0.5787037;
-  --lerp-2: 0.2962963;
-  --lerp-3: 0.125;
-  --lerp-4: 0.037037;
-  --lerp-5: 0.0046296;
-  --lerp-6: 0;
-}
-
-a {
-  outline-offset: 4px;
-}
-
-li {
-  flex: calc(0.1 + (var(--active-lerp, 0) * 1));
-  transition: flex 0.2s ease;
-}
-
-li:is(:hover, :focus-within) {
-  --active-lerp: var(--lerp-0);
-  z-index: 7;
-}
-
-li:has(+ li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within)+li {
-  --active-lerp: var(--lerp-1);
-  z-index: 6;
-}
-
-li:has(+ li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within)+li+li {
-  --active-lerp: var(--lerp-2);
-  z-index: 5;
-}
-
-li:has(+ li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within)+li+li+li {
-  --active-lerp: var(--lerp-3);
-  z-index: 4;
-}
-
-li:has(+ li + li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within)+li+li+li+li {
-  --active-lerp: var(--lerp-4);
-  z-index: 3;
-}
-
-li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within)+li+li+li+li+li {
-  --active-lerp: var(--lerp-5);
-  z-index: 2;
-}
-
-li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
-li:is(:hover, :focus-within)+li+li+li+li+li+li {
-  --active-lerp: var(--lerp-6);
-  z-index: 1;
-} */
-
-
 .photo-gallery p {
   height: 10rem;
-  width: 50vw;
+  width: auto;
   margin: 100px auto;
   position: relative;
 }
 
 .photo-gallery img {
-  height: 13rem;
+  height: 12vw;
+  min-height: 120px;
   position: absolute;
   offset-path: path('m 0 50 q 100-50 200-50 t 120 30 120 10 150-30 150 40');
   /* m 0 50 q 100-50 200-50 t 200 50 200 0 200-50 200 50' */
@@ -118,32 +29,40 @@ img:hover {
 
 /* 3 images */
 img:nth-last-child(3):first-child {
-  offset-distance: 17%;
+  /* offset-distance: 17%; */
+
+  offset-distance: calc(15vw - 100px);
 }
 
 img:nth-last-child(2):nth-child(2) {
-  offset-distance: 49%;
+  /* offset-distance: 49%; */
+  offset-distance: calc(32vw - 100px);
 }
 
 img:last-child:nth-child(3) {
-  offset-distance: 81%;
+  /* offset-distance: 81%; */
+  offset-distance: calc(47vw - 100px);
 }
 
 /* 4 images */
 img:nth-last-child(4):first-child {
-  offset-distance: 10%;
+  offset-distance: calc(10vw - 100px);
+  /* 10%; */
 }
 
 img:nth-last-child(3):nth-child(2) {
-  offset-distance: 35%;
+  offset-distance: calc(23vw - 100px);
+  /* 35% */
 }
 
 img:nth-last-child(2):nth-child(3) {
-  offset-distance: 65%;
+  offset-distance: calc(34vw - 100px);
+  /* 65%; */
 }
 
 img:last-child:nth-child(4) {
-  offset-distance: 90%;
+  offset-distance: calc(48vw - 100px);
+  /* 90%; */
 }
 
 /* 5 images */
@@ -165,4 +84,88 @@ img:nth-last-child(2):nth-child(4) {
 
 img:last-child:nth-child(5) {
   offset-distance: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+  .about>div,
+  .contact>div {
+    width: 95vw;
+    overflow-x: hidden;
+  }
+
+  .photo-gallery p {
+    height: 4rem;
+    width: auto;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .photo-gallery img {
+    height: 10vw;
+    min-height: 100px;
+    position: absolute;
+    offset-path: path('m 0 50 q 100-50 200-50 t 120 30 120 10 150-30 150 40');
+    /* m 0 50 q 100-50 200-50 t 200 50 200 0 200-50 200 50' */
+    box-shadow: 1px 1px 3px #0008;
+    transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77, -1.17, .75, .84), box-shadow .3s, z-index .3s;
+    z-index: 0;
+  }
+
+  /* 3 images */
+  img:nth-last-child(3):first-child {
+    offset-distance: 12vw;
+  }
+
+  img:nth-last-child(2):nth-child(2) {
+    offset-distance: 45vw
+  }
+
+  img:last-child:nth-child(3) {
+    offset-distance: 70vw
+  }
+
+  /* 4 images */
+  img:nth-last-child(4):first-child {
+    offset-distance: 10vw;
+    /* 5%; */
+  }
+
+  img:nth-last-child(3):nth-child(2) {
+    offset-distance: 35vw;
+    /* 16%; */
+  }
+
+  img:nth-last-child(2):nth-child(3) {
+    offset-distance: 63vw;
+    /* 28% */
+  }
+
+  img:last-child:nth-child(4) {
+    offset-distance: 89vw;
+    /* 40% */
+  }
+
+  /* 5 images */
+  img:nth-last-child(5):first-child {
+    offset-distance: 0%;
+  }
+
+  img:nth-last-child(4):nth-child(2) {
+    offset-distance: 25%;
+  }
+
+  img:nth-last-child(3):nth-child(3) {
+    offset-distance: 51%;
+  }
+
+  img:nth-last-child(2):nth-child(4) {
+    offset-distance: 75%;
+  }
+
+  img:last-child:nth-child(5) {
+    offset-distance: 100%;
+  }
+
 }
