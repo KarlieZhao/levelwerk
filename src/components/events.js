@@ -6,8 +6,10 @@ export default function Events() {
     <div>
       <NavBar showIcon={true} />
       <main className="events">
-        <Card time={<>Jan 2024<br/>Biting Puppets Workshop</>} url="/residents/yaoer.png" name="YAOER" bio="" />
-        <Card time={<>Dec 2024<br/>Winter Food Retreat</>} url="/residents/yoka.png" name="YOKA GONG" bio="" />
+        <Card time={<>Jan 2024<br/>Biting Puppets Workshop</>} 
+        url="/residents/yaoer.png" name="YAOER" bio="" />
+        <Card time={<>Dec 2024<br/>Winter Food Retreat</>} 
+        url="/residents/yoka.png" name="YOKA GONG" bio="I'm a visual storyteller, always finding 'new' narratives in everyday life. What I am doing is about transforming, collaborating, rearranging and manipulating ordinary objects into unfamiliar and unveiling new forms. I enjoy making connections among the objects and people surrounding me. To me, it is a means of discovery in which I navigate and interpret the world and myself." />
         <Card
           time={<>Sep 2024<br/>Origami Workshop</>}
           url="/residents/yanran.png"
