@@ -101,14 +101,16 @@
     position: absolute;
     display: block;
     top: -45%;
+    line-height: 0.95rem;
   }
+
 
   .card .text h2 {
     position: absolute;
     display: block;
     bottom: -5px;
     font-size: 1.3rem;
-    line-height: 1.6rem;
+    line-height: 1.3rem;
     font-weight: bold;
   }
 
