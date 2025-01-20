@@ -1,0 +1,106 @@
+.card {
+  display: block;
+  position: relative;
+  width: 20vw;
+  min-width: 200px;
+  height: 20vw;
+  min-height: 200px;
+  border: 5px solid #000;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.card:hover {
+  border: 5px solid #FF8204;
+}
+
+.card .corner-wrapper {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.card .corner {
+  position: relative;
+  /* margin-top: 1px; */
+  margin-right: 10px;
+  margin-left: auto;
+  width: 60px;
+  height: 60px;
+  /* background-color: #ff7f3f; */
+  transition: all 0.2s ease-in;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.card .text {
+  font-size: 1rem;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  transition: all 0.2s ease-in;
+}
+
+.card .text h1 {
+  position: absolute;
+  display: block;
+  top: -10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in;
+}
+
+.card .text p {
+  position: absolute;
+  display: block;
+  bottom: 20%;
+  line-height: 1.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in;
+}
+
+.card .text h2 {
+  position: absolute;
+  display: block;
+  bottom: -5px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .card .corner-wrapper {
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+
+  .card .corner {
+    margin-right: 0;
+  }
+
+  .card .text {
+    width: 19vw;
+    min-width: 180px;
+    bottom: 0;
+  }
+
+  .card .text h2 {
+    position: absolute;
+    display: block;
+    bottom: -5px;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+  }
+
+}

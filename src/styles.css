@@ -107,6 +107,15 @@ canvas {
   padding-top: 10rem;
 }
 
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .about p {
   text-indent: 15px;
 }
@@ -135,6 +144,7 @@ canvas {
   pointer-events: none;
   position: fixed;
 }
+
 
 @media (max-width: 768px) {
   body {
@@ -167,5 +177,10 @@ canvas {
     width: 95vw;
     padding-top: 10vh;
     padding-bottom: 5vh;
+  }
+
+  .events {
+    width: 100vw;
+    margin-top: 10vh;
   }
 }

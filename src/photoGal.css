@@ -16,7 +16,7 @@
   z-index: 0;
 }
 
-img:hover {
+.photo-gallery img:hover {
   transform: scale(2);
   /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
   /* offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0'); */

@@ -12,6 +12,8 @@ export default function NavBar({showIcon=true}){
         </Link>
         </div>
     <div role="button" className="NavBar-button">
+        <Link to="/events">Residents</Link></div>
+    <div role="button" className="NavBar-button">
         <Link to="/contact">Contact</Link></div>
     </div>);
 }
