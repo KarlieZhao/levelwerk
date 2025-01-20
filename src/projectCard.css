@@ -96,6 +96,12 @@
     bottom: 0;
   }
 
+  .card .text h1 {
+    position: absolute;
+    display: block;
+    top: -45%;
+  }
+
   .card .text h2 {
     position: absolute;
     display: block;

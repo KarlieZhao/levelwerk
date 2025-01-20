@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../projectCard.css';
+import isMobile from './isMobile';
 
 export default function Card(info) {
   const [hovered, setHovered] = useState(false);
@@ -7,6 +8,9 @@ export default function Card(info) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+    
+      onTouchstart={() => setHovered(true)}
+      onTouchEnd={() => setHovered(false)}
       className="card"
       style={{
         background: `url(${info.url}) no-repeat center/cover`,
@@ -19,11 +23,11 @@ export default function Card(info) {
           style={{backgroundColor: hovered ? '#ff7f3f' : '#000'}}
         ></div>
       </div>
-      <div
-        className="text"
-      >
+      <div className="text">
         <h1 className={`${hovered ? 'visible' : 'invisible'}`}>{info.time}</h1>
-        <p className={`${hovered ? 'visible' : 'invisible'}`}>{info.bio}</p>
+        <p className={`${hovered && !isMobile() ? 'visible' : 'invisible'}`}>
+          {info.bio}
+        </p>
         <h2>{info.name}</h2>
       </div>
     </div>
