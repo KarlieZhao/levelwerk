@@ -10,7 +10,7 @@
   border-top-right-radius: 0;
   background-size: cover;
   background-position: center;
-  background-blend-mode: screen;
+  background-blend-mode: multiply;
   overflow: hidden;
   transition: all 0.2s ease-in;
 }
@@ -51,18 +51,20 @@
 .card .text h1 {
   position: absolute;
   display: block;
-  top: -10px;
-  font-size: 0.8rem;
+  top: 0px;
+  line-height: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   transition: all 0.2s ease-in;
 }
 
 .card .text p {
   position: absolute;
+  width: 90%;
   display: block;
   bottom: 20%;
-  line-height: 1.3rem;
-  font-size: 1rem;
+  line-height: 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   transition: all 0.2s ease-in;
 }

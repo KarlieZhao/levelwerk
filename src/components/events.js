@@ -6,17 +6,17 @@ export default function Events() {
     <div>
       <NavBar showIcon={true} />
       <main className="events">
-        <Card time="Jan 2024" url="/residents/yaoer.png" name="YAOER" bio="Biting Puppets Workshop" />
-        <Card time="Dec 2024" url="/residents/yoka.png" name="YOKA GONG" bio="Winter Food Retreat" />
+        <Card time={<>Jan 2024<br/>Biting Puppets Workshop</>} url="/residents/yaoer.png" name="YAOER" bio="" />
+        <Card time={<>Dec 2024<br/>Winter Food Retreat</>} url="/residents/yoka.png" name="YOKA GONG" bio="" />
         <Card
-          time="Sep 2024"
+          time={<>Sep 2024<br/>Origami Workshop</>}
           url="/residents/yanran.png"
           name={
             <>
               YANRAN BI <br /> x SUMMER
             </>
           }
-          bio="Interdisciplinary artist based in NYC. Her practice is often site-specifc, immersing hersolf in environments to examine the subtle ambiances of space--sound, light, spirit--and weaving them into imagined propositions. "
+          bio="Interdisciplinary artist based in NYC. Her practice is often site-specifc, immersing herself in environments to examine the subtle ambiances of space--sound, light, spirit--and weaving them into imagined propositions. "
         /></main>
     </div>
   );
