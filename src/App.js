@@ -1,18 +1,17 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Main from './components/main';
 import About from './components/about';
-import Contact from "./components/contact";
-import Events from "./components/events";
+import Contact from './components/contact';
+import Events from './components/events';
 export default function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Main />}/>
-      <Route path="about" element={<About />} />
-      <Route path="events" element={<Events />} />
-      <Route path="contact" element={<Contact />} />
-    </Routes>
-  </BrowserRouter>
-  )
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="about" element={<About />} />
+        <Route path="events" element={<Events />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }

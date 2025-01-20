@@ -62,11 +62,12 @@
   position: absolute;
   width: 90%;
   display: block;
-  bottom: 20%;
+  bottom: 25%;
   line-height: 1.1rem;
   font-size: 0.9rem;
   font-weight: bold;
   transition: all 0.2s ease-in;
+  font-weight: 400;
 }
 
 .card .text h2 {
