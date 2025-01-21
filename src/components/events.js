@@ -11,7 +11,7 @@ export default function Events() {
         <Card time={<>Dec 2024<br/>Winter Food Retreat</>} 
         url="/residents/yoka.png" name="YOKA GONG" bio="Yoka Gong is a visual storyteller, always finding 'new' narratives in everyday life. She transforms, collaborate, and rearrange ordinary objects into unfamiliar and unveiling new forms. She enjoys making connections among the objects and people surrounding herself." />
         <Card
-          time={<>Sep 2024<br/>Origami Workshop</>}
+          time={<>Sep 2024<br/>Paper as Medium: Origami Workshop</>}
           url="/residents/yanran.png"
           name={
             <>

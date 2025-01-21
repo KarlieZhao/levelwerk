@@ -22,7 +22,7 @@ body {
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: -0.2px;
-  line-height: 1.4rem;
+  line-height: 1.3rem;
   word-spacing: -1px;
   font-style: normal;
   font-variation-settings:
@@ -32,8 +32,6 @@ body {
 
 body {
   color: #fff;
-  font-size: 1.1rem;
-  line-height: 2rem;
   background: #000;
 }
 
